@@ -12,7 +12,7 @@ public:
     // Constructor
     Document(int id, const std::string& title);
 
-    //Virtual destructor for proper cleanup of derived classes
+    // Virtual destructor for proper cleanup of derived classes
     virtual ~Document();
 
     // Getters

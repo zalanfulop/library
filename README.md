@@ -14,4 +14,10 @@ If the function waits for a reference variable and I provide a variable, C++ aut
 
 #include - preprocessor directive
 
+Access specifiers in inheritance: the level of accessibility of class members will be maximum as defined.
+
+In the constructor, : is used to initialize the class members before the body of the constructor is executed.
+
+The problem was: no constructor is defined in the derived class, as given input.no instance of overloaded function "Magazine::Magazine" matches the specified typeC/C++
+
 

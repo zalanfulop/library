@@ -8,7 +8,7 @@ private:
     int issueNumber;
 public:
     // Constructor
-    Magazine(int id, std::string& title, int issueNumber);
+    Magazine(int id, const std::string& title, int issueNumber);
 
     // Override the displayInfo method
     void displayInfo() const override;
