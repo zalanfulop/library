@@ -2,7 +2,7 @@
 #include <iostream>
 
 // Constructor
-Magazine::Magazine(int id, const std::string& title, int issueNumber) : Document(id, title), issueNumber(issueNumber) {
+Magazine::Magazine(int id,  const std::string& title, int issueNumber) : Document(id, title), issueNumber(issueNumber) {
     // log or debug information when an object is created
 }
 
