@@ -1,0 +1,12 @@
+# Exclude all files without an extension.
+*~
+
+# Exclude specific output file:
+a.out
+
+# More general patterns
+*.out
+.o
+
+# For Windows
+*.exe
