@@ -4,6 +4,10 @@
 // Constructor
 Book::Book(int id, const std::string& title, const std::string& author) : Document(id, title), author(author) {}
 
+
+// Getter
+std::string Book::getAuthor() const { return author; }
+
 // Override displayInfo method
 void Book::displayInfo() const {
     std::cout << "Book ID: " << id << ", Title: " << title << ", Author: " << author << std::endl;

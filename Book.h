@@ -12,6 +12,9 @@ public:
     // Constructor
     Book(int id, const std::string& title, const std::string& author);
     
+    // Getter
+    std::string getAuthor() const;
+
     // Override the displayInfo method
     void displayInfo() const override;
 

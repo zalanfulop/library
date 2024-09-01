@@ -1,6 +1,6 @@
 CXX = g++
 # CXXFLAGS = -std=c++11 -02 -Wall -g
-SOURCES = main.cpp Document.cpp Book.cpp Magazine.cpp
+SOURCES = main.cpp Library.cpp Document.cpp Book.cpp Magazine.cpp
 TARGET = library
 
 $(TARGET) : $(SOURCES)

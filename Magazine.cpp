@@ -6,6 +6,10 @@ Magazine::Magazine(int id,  const std::string& title, int issueNumber) : Documen
     // log or debug information when an object is created
 }
 
+// Getter
+int Magazine::getIssueNumber() const { return issueNumber; }
+
+
 // Override diplayInfo method
 void Magazine::displayInfo() const{
     std::cout << "Magazine ID: " << id << ", Title: " << title << ", Issue: " << issueNumber << std::endl;

@@ -10,6 +10,9 @@ public:
     // Constructor
     Magazine(int id, const std::string& title, int issueNumber);
 
+    // Getter
+    int getIssueNumber() const;
+    
     // Override the displayInfo method
     void displayInfo() const override;
 
