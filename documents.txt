@@ -1,0 +1,10 @@
+101,The Great Gatsby,F. Scott Fitzgerald
+202,National Geographic,202310
+103,To Kill a Mockingbird,Harper Lee
+204,Time Magazine,202403
+105,1984,George Orwell
+206,Forbes,202307
+107,Moby Dick,Herman Melville
+208,Vogue,202409
+109,War and Peace,Leo Tolstoy
+210,Science Magazine,202408
