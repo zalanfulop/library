@@ -25,7 +25,7 @@ public:
     void add(int id, const std::string& title, int issueNumber);
 
     // Search by title method
-    Document* searchByTitle(const std::string& title) const;
+    void searchByTitle(const std::string& part) const;
 };
 
 #endif

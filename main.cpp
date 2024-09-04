@@ -52,14 +52,39 @@ int main(){
         }
     }
 
-    
     inputFile.close();
-    library->list();
+
+    do {
+        char choice;
+        std::string searchStr;
+
+        std::cout << "Enter choice (l for list, s for search by title): ";
+        std::cin >> choice;
+
+        switch(choice) {
+            case 'l':
+                library->list();
+                break;
+            case 's':
+                std::cout << "Enter title part to search: ";
+                std::cin >> searchStr;
+                library->searchByTitle(searchStr);
+                break;
+            default:
+                std::cout << "Invalid choice!" << std::endl;
+                break;
+
+        }
+        std::cout << "Would you like to exit the program? (y/n): ";
+        char exit;
+        std::cin >> exit;
+
+        if (exit == 'y') {
+            break; // exit the loop if the user chooses 'y'
+        }
+    } while (true);
+
     delete library;
-
-    
-
-
 
     // Add sample content to the library
     /*library->add(1, "1984", "George Orwell");

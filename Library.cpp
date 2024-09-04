@@ -16,8 +16,8 @@ Library::~Library() {
 void Library::list(){
     for(Document* doc : content){
         doc->displayInfo();
-        doc->getId();
-        doc->getTitle();
+        //doc->getId();
+        //doc->getTitle();
     }
 }
 
@@ -35,7 +35,7 @@ void Library::add(int id, const std::string& title, int issueNumber){
 
 // Example method to search by title
 // Const at the end of definition means that the method does not modify the state of the Library object
-Document* Library::searchByTitle(const std::string& title) const {
+/*Document* Library::searchByTitle(const std::string& title) const {
     for(Document* doc : content){
         if(doc->getTitle() == title){
             return doc;
@@ -44,4 +44,16 @@ Document* Library::searchByTitle(const std::string& title) const {
     // Warning: the function might reach end without returning a value
     // To always return something
     return nullptr;
+}*/
+
+// Search by title: 
+// Input: character or a string, Output: A document with a title containing the input
+// Example: The book titled 1984 by George Orwell is present in the library. The user searchs for '98', the method returns the forementioned document.
+void Library::searchByTitle(const std::string& part) const {
+    for (Document* doc : content) {
+        if (doc->getTitle().find(part) != std::string::npos) {
+            // npos is effectively an indicator for 'not found'
+            doc->displayInfo();
+        }
+    }
 }
