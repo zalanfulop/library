@@ -19,7 +19,7 @@ bool isNumber(const std::string& str) {
 
 int main(){
     // Initialize the library
-    Library* library = new Library();
+    Library* library = Library::getInstance();
 
     // Open the input file
     std::ifstream inputFile("documents.txt");
@@ -84,7 +84,7 @@ int main(){
         }
     } while (true);
 
-    delete library;
+    Library::releaseInstance;
 
     // Add sample content to the library
     /*library->add(1, "1984", "George Orwell");

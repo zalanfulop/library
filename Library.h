@@ -9,11 +9,17 @@
 class Library{
 private:
     std::vector<Document*> content;
-public:
-    // Constructor
+    // Static member to hold the single instance
+    static Library* instance;
+    // Singleton pattern: private cons and dest
     Library();
-    // Destructor
     ~Library();
+    // Variable to keep track if Library was already created
+    bool created;
+public:
+    // Methods to create and delete Library object
+    static Library* getInstance();
+    static void releaseInstance();
     
     // List all content
     void list();

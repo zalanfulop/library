@@ -1,8 +1,13 @@
 #include "Library.h"
 #include <iostream>
 
+// Initialize static member
+Library* Library::instance = nullptr;
+
 //Constructor
-Library::Library() {}
+Library::Library() : created(false){
+    created = true;
+}
 
 //Destructor
 Library::~Library() {
@@ -11,6 +16,25 @@ Library::~Library() {
         delete doc;
     }
 }
+
+// Method to initialize a Library object
+Library* Library::getInstance(){
+    if (instance == nullptr){
+        instance = new Library();
+    } else {
+        std::cerr << "Library object already created once." << std::endl;
+    }
+    return instance;
+}
+
+// Method to delete a Library object
+void Library::releaseInstance() {
+    if (instance != nullptr) {
+        delete instance;
+        instance == nullptr;
+    }
+}
+
 
 // Method to list all documents of the library
 void Library::list(){
